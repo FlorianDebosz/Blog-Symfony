@@ -37,6 +37,8 @@ services:
   adminer:
     image: adminer
     restart: always
+    environment:
+      ADMINER_DESIGN: hydra
     ports:
       - 8080:8080
 
