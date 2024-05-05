@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
+{% block body %}
+    <h1>Inscription</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.username, {'label': 'Nom d\'utilisateur','attr': {'placeholder': 'Username'}}) }}
+    {{ form_row(form.email, {'label': 'Email','attr': {'placeholder': 'Email Adress'}}) }}
+    {{ form_row(form.password, {'label': 'Mot de passe','attr': {'placeholder': 'Password'}}) }}
+    {{ form_row(form.confirm_password, {'label': 'Confirmation de mot de passe','attr': {'placeholder': 'Password Confirm'}}) }}
+    <button type="submit" class="btn btn-success">Inscription</button>
+    {{form_end(form) }}
+{% endblock %}
